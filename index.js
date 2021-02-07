@@ -82,7 +82,7 @@ const promptUser = () => {
       type: 'list',
       name: 'license',
       message: 'Please choose a license for this project.',
-      choices: ['ISC', 'IPL 1.0', 'MIT', 'MPL 2.0', 'PDDL'],
+      choices: ['ISC', 'MIT', 'PDDL', 'ODbL'],
       when: ({ confirmLicense }) => {
         if (confirmLicense) {
           return true;
@@ -117,10 +117,10 @@ const promptUser = () => {
   ]);
 };
 
-// TODO: Create a function to write README file
-const writeToFile = fileName => {
+// write README.md to dist folder
+const writeToFile = fileContent => {
   return new Promise((resolve, reject) => {
-    fs.writeFile('./dist/README.md', pageContent, err => {
+    fs.writeFile('./dist/README.md', fileContent, err => {
       if (err) {
         reject(err);
         return;
@@ -139,8 +139,8 @@ promptUser()
   .then(readmeObj => {
     return generateMarkdown(readmeObj);
   })
-  .then(pageContent => {
-    return writeToFile(pageContent);
+  .then(fileContent => {
+    return writeToFile(fileContent);
   })
   .catch(err => {
     console.log(err);
