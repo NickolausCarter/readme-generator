@@ -34,6 +34,6 @@
   create a mockData object for username, email, title, description, installation, usage, license, contribute, and test keys. Assign values to each. Comment out the promptUser() promise chain and run "node index.js" from terminal.
 
   ## Questions
-  GitHub: <https://github.com/nickolauscarter>
+  GitHub: <https://github.com/nickolauscarter><br>
   Email: <nickolaus.carter81@gmail.com>
   
