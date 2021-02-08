@@ -1,8 +1,9 @@
-// TODO: Include packages needed for this application
+// dependancies for application to work correctly
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
-// TODO: Create an array of questions for user input
+
+// use inquirer to request information from user to pass to generateMarkdown.js for data compilation
 const promptUser = () => {
   return inquirer.prompt([
     {
@@ -134,7 +135,7 @@ const writeToFile = fileContent => {
   });
 };
 
-// Promise calls to run through program.
+// Program execution sequence
 promptUser()
   .then(readmeObj => {
     return generateMarkdown(readmeObj);
