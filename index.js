@@ -64,14 +64,40 @@ const promptUser = () => {
       }
     },
     {
+      type: 'confirm',
+      name: 'confirmInstallation',
+      message: 'Would you like to provide installation instructions?',
+      default: true
+    },
+    {
       type: 'input',
       name: 'installation',
-      message: 'Please provide installation instructions:'
+      message: 'Please provide installation instructions:',
+      when: ({ confirmInstallation }) => {
+        if (confirmInstallation) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    },
+    {
+      type: 'confirm',
+      name: 'confirmUsage',
+      message: 'Would you like to provide usage instructions?',
+      default: true
     },
     {
       type: 'input',
       name: 'usage',
-      message: 'Please explain the intended use of this project:'
+      message: 'Please explain the intended use of this project:',
+      when: ({ confirmUsage }) => {
+        if (confirmUsage) {
+          return true;
+        } else {
+          return false;
+        }
+      }
     },
     {
       type: 'confirm',
@@ -111,9 +137,22 @@ const promptUser = () => {
       }
     },
     {
+      type: 'confirm',
+      name: 'confirmTest',
+      message: 'Would you like to provide test instructions?',
+      default: true
+    },
+    {
       type: 'input',
       name: 'test',
-      message: 'Please provide test instructions:'
+      message: 'Please provide test instructions:',
+      when: ({ confirmTest }) => {
+        if (confirmTest) {
+          return true;
+        } else {
+          return false;
+        }
+      }
     }
   ]);
 };

@@ -3,6 +3,8 @@
 ## Table of Contents
 
 - [Description](#description)
+- [What I Learned](#what-i-learned)
+- [Technology Used](#technology-used)
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
@@ -13,6 +15,23 @@
 ## Description
 
 A simple project that allows developers to quickly build a professional README.md for their project.
+
+## What I Learned
+
+- node.js functionality and documentation searching
+- uses for npm and how to search through documentation
+- native node.js modules like file system and npm modules like inquirer
+- how to create a new file based on user provided input
+- gained more comfort with markdown and a lot of basic knowledge of node.js
+- first time doing object destructuring and it made working with objects and arrays much easier
+
+## Technology Used
+
+- JavaScript
+- ES6
+- node.js
+- file system (node module)
+- inquirer (npm module)
 
 ## Installation
 
